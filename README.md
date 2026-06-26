@@ -11,8 +11,11 @@ This is my first app. It is a phone app that will let you enter text, your phone
 ## Requirements
 
 - Mac with **Xcode 15+**
-- iPhone running **iOS 16+** (two phones recommended for full testing)
+- **iPhone 11** or newer (primary test target); **iOS 15+**
+- Two iPhones recommended for full send/receive testing
 - Free Apple ID for on-device development
+
+The iPhone 11 rear flash and camera are fully supported for Morse send and receive.
 
 See [MAC_SETUP.md](MAC_SETUP.md) for step-by-step Mac and iPhone setup.
 

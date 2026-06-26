@@ -16,9 +16,9 @@ Clone or copy this repository, then open:
 
 ## 3. Connect your iPhone
 
-1. Plug in your iPhone with a USB cable.
+1. Plug in your iPhone 11 (or other iPhone) with a USB cable.
 2. On the iPhone, tap **Trust** if prompted.
-3. On iOS 16+, enable **Settings → Privacy & Security → Developer Mode** and restart if asked.
+3. On **iOS 16+**, enable **Settings → Privacy & Security → Developer Mode** and restart if asked. (Not required on iOS 15.)
 
 ## 4. Configure signing
 

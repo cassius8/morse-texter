@@ -5,7 +5,7 @@ struct SendView: View {
     @State private var message = ""
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             Form {
                 Section("Message") {
                     TextField("Type text to send", text: $message)
@@ -17,7 +17,7 @@ struct SendView: View {
 
                     Text("\(message.count)/\(MorseCodec.maxMessageLength)")
                         .font(.caption)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
 
                 Section("Morse preview") {
@@ -40,7 +40,7 @@ struct SendView: View {
 
                 Section {
                     Text(sender.statusMessage)
-                        .foregroundStyle(.secondary)
+                        .foregroundColor(.secondary)
                 }
             }
             .navigationTitle("Send")

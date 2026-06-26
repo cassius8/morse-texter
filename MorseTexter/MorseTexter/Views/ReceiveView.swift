@@ -4,18 +4,23 @@ struct ReceiveView: View {
     @StateObject private var receiver = CameraReceiver()
 
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack(spacing: 16) {
                 ZStack {
                     CameraPreviewView(session: receiver.session)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
 
                     if receiver.permissionDenied {
-                        ContentUnavailableView(
-                            "Camera access needed",
-                            systemImage: "camera.fill",
-                            description: Text("Allow camera access in Settings to read Morse flashes.")
-                        )
+                        VStack(spacing: 12) {
+                            Image(systemName: "camera.fill")
+                                .font(.largeTitle)
+                            Text("Camera access needed")
+                                .font(.headline)
+                            Text("Allow camera access in Settings to read Morse flashes.")
+                                .font(.subheadline)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.secondary)
+                        }
                         .padding()
                     }
                 }
@@ -34,7 +39,7 @@ struct ReceiveView: View {
 
                 Text(receiver.debugInfo)
                     .font(.caption)
-                    .foregroundStyle(.secondary)
+                    .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 HStack {
